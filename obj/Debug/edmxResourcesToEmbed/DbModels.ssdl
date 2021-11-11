@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="foxconModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="employee">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_rule" Type="int" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="104" Nullable="false" />
+    <Property Name="salary" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="gender" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="active" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="created_at" Type="datetime" />
+    <Property Name="modified_at" Type="timestamp" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="rule">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="54" />
+    <Property Name="active" Type="char" MaxLength="1" />
+    <Property Name="created_at" Type="datetime" />
+    <Property Name="modifield_at" Type="timestamp" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <Association Name="FK_employee_rule">
+    <End Role="rule" Type="Self.rule" Multiplicity="1" />
+    <End Role="employee" Type="Self.employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="rule">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="employee">
+        <PropertyRef Name="id_rule" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="foxconModelStoreContainer">
+    <EntitySet Name="employee" EntityType="Self.employee" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="rule" EntityType="Self.rule" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_employee_rule" Association="Self.FK_employee_rule">
+      <End Role="rule" EntitySet="rule" />
+      <End Role="employee" EntitySet="employee" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
