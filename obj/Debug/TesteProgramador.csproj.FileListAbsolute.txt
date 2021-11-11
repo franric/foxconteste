@@ -86,3 +86,5 @@ C:\Users\francisco.IMARKETING\Documents\Dev\teste\TesteProgramador\obj\Debug\Tes
 C:\Users\francisco.IMARKETING\Documents\Dev\teste\TesteProgramador\obj\Debug\TesteProgramador.pdb
 C:\Users\francisco.IMARKETING\Documents\Dev\teste\TesteProgramador\bin\EntityFramework.dll
 C:\Users\francisco.IMARKETING\Documents\Dev\teste\TesteProgramador\bin\EntityFramework.xml
+C:\Users\FRANCISCO-HOME\Documents\Dev\foxconteste\obj\Debug\TesteProgramador.csproj.AssemblyReference.cache
+C:\Users\FRANCISCO-HOME\Documents\Dev\foxconteste\obj\Debug\TesteProgramador.csproj.CoreCompileInputs.cache
