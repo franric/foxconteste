@@ -1,0 +1,53 @@
+﻿@{
+    ViewBag.Title = "Foxcon";
+}
+
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1>Departamentos</h1>
+                </div>
+                <!-- /.col -->
+            </div>
+        </div><!-- /.container-fluid -->
+    </section>
+
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <!-- left column -->
+                <div class="col-md-3">
+                </div>
+
+                <div class="col-md-6">
+                    <!-- general form elements -->
+                    <div class="card card-default">
+
+                        <!-- form start -->
+                        <div class="card-header">
+                            <h3 class="card-title"><i class="fa fa-user-circle"> </i> Cadastrar Departamentos</h3>
+                        </div>
+                        <form action="/" method="post"></form>
+                        <!-- /.card-header -->
+                        <div class="card-body">                            
+                            <div class="form-group">
+                                <label for="sigla">Nome</label>
+                                <input type="text" name="name" value="" class="form-control" />
+                            </div>                            
+                            <!-- /.card-body -->
+                        </div>
+                        <div class="card-footer">
+                            <a href="@Url.Action("Index", "Departamentos")" class="btn flat btn-default">Voltar</a>
+                            <input type="submit" class="btn flat btn-default float-right" value="Salvar"/>
+                        </div>
+                        </form>
+                    </div>
+                </div>
+    </section>
+
+</div>
+<!-- /.content-wrapper -->
